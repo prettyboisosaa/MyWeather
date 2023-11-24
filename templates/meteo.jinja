@@ -40,22 +40,26 @@
       <table>
           <tr>
             <th>Location</th>
+            <th>Local Time</th>
             <th>Temperature (&deg;C)</th>
             <th>Condition</th>
             <th>Humidity</th>
             <th>Wind (km/h)</th>
             <th>Pressure (mb)</th>
             <th>Precipitation (mm)</th>
+            <th>Icon</th>
           </tr>
           <tr>
               <td>{{ data['location']['name'] }}</td>
+              <td>{{ data['location']['localtime']}}</td>
               <td>{{ data['current']['temp_c'] }}</td>
               <td>{{ data['current']['condition']['text'] }}</td>
               <td>{{ data['current']['humidity'] }}%</td>
               <td>{{ data['current']['wind_kph'] }}</td>
               <td>{{ data['current']['pressure_mb'] }}</td>
               <td>{{ data['current']['precip_mm'] }}</td>
-              <!-- Aggiungi altri valori dei campi se nece
+              <td><img src={{ data['current']['condition']['icon'] }} alt="weather icon"></td>
+            
           </tr>
       </table>
   {% endif %}
