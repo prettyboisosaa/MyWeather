@@ -27,14 +27,15 @@
   </head>
   <body>
     <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand">My Weather App</a>
-          <form class="d-flex" action="/submit" method="POST">
-            <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" id="message" name="message">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
+      <div class="container-fluid">
+        <a class="navbar-brand">Weather Datas</a>
+        <form class="d-flex" action="/astro" method="POST">
+          <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" id="message" name="message">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  
 
       {% if data %}
       <table>
